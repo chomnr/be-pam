@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -g -shared -Wl,-soname,libbe_pam.so -o libbe_pam.so CMakeFiles/be_pam.dir/library.c.o 
